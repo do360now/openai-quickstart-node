@@ -28,7 +28,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img src="/dog.png" className={styles.icon} />
+        <img src="/helloai.png" className={styles.icon} />
         {/* <h3>Hello Ai,</h3> */}
         <h2><center><p>Hello Ai,</p></center>
         <p>Please help me name my pet...</p></h2>
