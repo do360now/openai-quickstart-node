@@ -9,7 +9,7 @@ COPY .env /openai-quickstart-node
 
 WORKDIR /openai-quickstart-node
 
-EXPOSE 3000
+EXPOSE 443
 
 RUN npm install
 CMD ["npm", "run", "dev"]
