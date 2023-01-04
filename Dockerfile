@@ -5,7 +5,7 @@ RUN apt-get update \
 && cd openai-quickstart-node
 # cp .env.example .env
 
-COPY .env /openai-quickstart-node
+COPY . /openai-quickstart-node
 
 WORKDIR /openai-quickstart-node
 

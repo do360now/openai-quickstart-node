@@ -1,10 +1,10 @@
 VERSION = 0.3.0
 
 docker-build:
-	docker build -t do360now/mynodejs:${VERSION} .
+	docker build -t do360now/helloainode:${VERSION} .
 
 docker-run:
-	docker run -d --name helloai -p 3000:3000 do360now/mynodejs:${VERSION}
+	docker run -d --name helloai -p 3000:3000 do360now/helloainode${VERSION}
 	docker ps
 
 encrypt:
