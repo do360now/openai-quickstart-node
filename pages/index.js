@@ -31,16 +31,16 @@ export default function Home() {
         <img src="/helloai.png" className={styles.icon} />
         {/* <h3>Hello Ai,</h3> */}
         <h2><center><p>Hello Ai,</p></center>
-        <p>Please help me name my pet...</p></h2>
+        <p>Please show me...</p></h2>
         <form onSubmit={onSubmit}>
           <input
             type="text"
-            name="animal"
-            placeholder="Enter an animal"
+            name="question"
+            placeholder="Enter your question"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />
-          <input type="submit" value="Generate names" />
+          <input type="submit" value="Ask Question" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>

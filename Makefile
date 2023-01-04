@@ -1,10 +1,11 @@
-VERSION = 0.2.0
+VERSION = 0.3.0
 
 docker-build:
 	docker build -t do360now/mynodejs:${VERSION} .
 
 docker-run:
-	docker run -d --name petname -p 80:80 do360now/mynodejs:${VERSION}
+	docker run -d --name helloai -p 3000:3000 do360now/mynodejs:${VERSION}
+	docker ps
 
 encrypt:
 	ansible-vault encrypt .env --ask-vault-pass
