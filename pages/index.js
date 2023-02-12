@@ -30,13 +30,14 @@ export default function Home() {
       <main className={styles.main}>
         <img src="/helloai.png" className={styles.icon} />
         {/* <h3>Hello Ai,</h3> */}
-        <h2><center><p>Hello Ai,</p></center>
-        <p>Please show me...</p></h2>
+        <h2><center><p>Hello, how may I help you?</p></center>
+        {/* <p>Ask anything you want</p> */}
+        </h2>
         <form onSubmit={onSubmit}>
           <input
             type="text"
             name="question"
-            placeholder="Enter your question"
+            placeholder="Ask anything you want :)"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />

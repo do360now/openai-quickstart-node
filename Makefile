@@ -1,11 +1,20 @@
 VERSION = 0.3.0
 
 docker-build:
-	docker build -t do360now/helloainode:${VERSION} .
+	docker build -t helloairegistry.azurecr.io/helloai:${VERSION} .
+
+# docker tag hello-world helloairegistry.azurecr.io/hello-world
 
 docker-run:
-	docker run -d --name helloai -p 3000:3000 do360now/helloainode${VERSION}
+	docker run -d --name helloai -p 3000:3000 helloairegistry.azurecr.io/helloai:${VERSION}
 	docker ps
+
+docker-login:
+	docker login helloairegistry.azurecr.io
+
+docker-push:
+	docker push helloairegistry.azurecr.io/helloai:${VERSION}
+# docker push helloairegistry.azurecr.io/hello-world
 
 encrypt:
 	ansible-vault encrypt .env --ask-vault-pass
